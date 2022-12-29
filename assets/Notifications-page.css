@@ -1,0 +1,169 @@
+:root {
+  /* --- FONTS --- */
+  font-family: "Plus Jakarta Sans";
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+
+  /* --- COLOR PALETTE --- */
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue: hsl(211, 68%, 94%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  background-color: var(--Very-dark-blue);
+}
+
+.hoverable:hover {
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.inactive {
+  display: none;
+}
+
+.unread {
+  background-color: var(--Light-grayish-blue);
+}
+
+.tooltip {
+  background-color: var(--Blue);
+  color: var(--White);
+  border-radius: 0.5rem;
+  padding: 4px 12px;
+  margin: 1rem;
+  font-size: 1rem;
+  position: relative;
+  left: 5.25rem;
+  top: -1.5rem;
+}
+
+.dot {
+  background-color: var(--Red);
+  border-radius: 50%;
+  padding: 1px 4px;
+  margin: 1rem;
+  font-size: 0.45rem;
+  position: relative;
+  top: -0.15rem;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--Very-dark-blue);
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Dark-grayish-blue);
+  margin-top: 0.2rem;
+}
+
+.card {
+  margin: 0 auto;
+  min-width: 20rem;
+  background-color: var(--White);
+  color: var(--Dark-grayish-blue);
+  font-weight: 500;
+  padding: 1rem;
+}
+
+.notifications {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.post {
+  width: 100%;
+  position: relative;
+  border-radius: 2px;
+}
+
+.post:hover {
+  cursor: pointer;
+}
+
+.text {
+  margin: 1rem 1rem 1rem 4.5rem;
+}
+
+.message {
+  margin: -1rem 1rem 1rem 4.5rem;
+  padding: 1rem;
+  border: 1px solid var(--Grayish-blue);
+  border-radius: 2px;
+}
+
+.user {
+  color: var(--Very-dark-blue);
+  font-weight: 800;
+}
+
+.hash {
+  color: var(--Dark-grayish-blue);
+  font-weight: 800;
+}
+
+.date {
+  color: var(--Grayish-blue);
+}
+
+.avatar {
+  width: 2.5rem;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.attribution {
+  color: var(--White);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution > a {
+  color: var(--Blue);
+}
+
+@media screen and (width>425px) {
+  .card {
+    max-width: 75%;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+  }
+}
